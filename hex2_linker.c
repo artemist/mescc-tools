@@ -293,12 +293,12 @@ int Architectural_displacement(int target, int base)
 		 */
 		return ((target - base) - 8 + (3 & base));
 	}
-	else if(ALIGNED && (AARM64 == Architecture))
+	else if(ALIGNED && (AARCH64 == Architecture))
 	{
 			ALIGNED = FALSE;
 			return (target - (~3 & base)) >> 2;
 	}
-	else if (AARM64 == Architecture)
+	else if (AARCH64 == Architecture)
 	{
 		return ((target - base) - 8 + (3 & base));
 	}
@@ -480,7 +480,7 @@ void process_byte(char c, FILE* source_file, int write)
 
 void pad_to_align(int write)
 {
-	if((ARMV7L == Architecture) || (AARM64 == Architecture) || (RISCV32 == Architecture) || (RISCV64 == Architecture))
+	if((ARMV7L == Architecture) || (AARCH64 == Architecture) || (RISCV32 == Architecture) || (RISCV64 == Architecture))
 	{
 		if(1 == (ip & 0x1))
 		{

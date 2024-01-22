@@ -32,7 +32,7 @@
 #define X86 0x03
 #define AMD64 0x3E
 #define ARMV7L 0x28
-#define AARM64 0xB7
+#define AARCH64 0xB7
 #define PPC64LE 0x15
 #define RISCV32 0xF3
 #define RISCV64 0x100F3 /* Because RISC-V unlike all other architectures does get a seperate e_machine when changing from 32 to 64bit */

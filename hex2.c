@@ -75,7 +75,7 @@ int main(int argc, char **argv)
 			else if(match("x86", arch)) Architecture = X86;
 			else if(match("amd64", arch)) Architecture = AMD64;
 			else if(match("armv7l", arch)) Architecture = ARMV7L;
-			else if(match("aarch64", arch)) Architecture = AARM64;
+			else if(match("aarch64", arch)) Architecture = AARCH64;
 			else if(match("ppc64le", arch)) Architecture = PPC64LE;
 			else if(match("riscv32", arch)) Architecture = RISCV32;
 			else if(match("riscv64", arch)) Architecture = RISCV64;
@@ -161,7 +161,7 @@ int main(int argc, char **argv)
 	}
 
 	/* Catch implicitly false assumptions */
-	if(BigEndian && ((X86 == Architecture) || ( AMD64 == Architecture) || (ARMV7L == Architecture) || (AARM64 == Architecture) || (RISCV32 == Architecture) || (RISCV64 == Architecture)))
+	if(BigEndian && ((X86 == Architecture) || ( AMD64 == Architecture) || (ARMV7L == Architecture) || (AARCH64 == Architecture) || (RISCV32 == Architecture) || (RISCV64 == Architecture)))
 	{
 		fputs(">> WARNING <<\n>> WARNING <<\n>> WARNING <<\n", stderr);
 		fputs("You have specified big endian output on likely a little endian processor\n", stderr);

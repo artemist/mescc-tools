@@ -39,8 +39,8 @@
 #define AMD64 0x3E
 // CONSTANT ARMV7L 40
 #define ARMV7L 0x28
-// CONSTANT AARM64 183
-#define AARM64 0xB7
+// CONSTANT AARCH64 183
+#define AARCH64 0xB7
 // CONSTANT PPC64LE 21
 #define PPC64LE 0x15
 // CONSTANT RISCV32 243
@@ -696,7 +696,7 @@ void eval_immediates(struct blob* p)
 		else if('<' == i->Text[0]) continue;
 		else if(NULL == i->Expression)
 		{
-			if((X86 == Architecture) || (AMD64 == Architecture) || (ARMV7L == Architecture) || (AARM64 == Architecture) || (PPC64LE == Architecture))
+			if((X86 == Architecture) || (AMD64 == Architecture) || (ARMV7L == Architecture) || (AARCH64 == Architecture) || (PPC64LE == Architecture))
 			{
 				if(in_set(i->Text[0], "%~@!&$"))
 				{
@@ -822,7 +822,7 @@ int main(int argc, char **argv)
 			else if(match("x86", arch)) Architecture = X86;
 			else if(match("amd64", arch)) Architecture = AMD64;
 			else if(match("armv7l", arch)) Architecture = ARMV7L;
-			else if(match("aarch64", arch)) Architecture = AARM64;
+			else if(match("aarch64", arch)) Architecture = AARCH64;
 			else if(match("ppc64le", arch)) Architecture = PPC64LE;
 			else if(match("riscv32", arch)) Architecture = RISCV32;
 			else if(match("riscv64", arch)) Architecture = RISCV64;
